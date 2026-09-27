@@ -1,0 +1,60 @@
+name: macOS build
+
+# Builds ad-hoc signed DMGs for Apple Silicon and Intel, plus the signed updater
+# bundles (.app.tar.gz + .sig). The release itself lives in gkerherve/KherveDB, so the
+# artifacts are downloaded and uploaded there by the release step (see README).
+on:
+  push:
+    tags: ["v*"]
+  workflow_dispatch:
+
+jobs:
+  build:
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - runner: macos-14
+            target: aarch64-apple-darwin
+            arch: arm64
+          - runner: macos-15-intel
+            target: x86_64-apple-darwin
+            arch: x86_64
+    runs-on: ${{ matrix.runner }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          targets: ${{ matrix.target }}
+      - uses: swatinem/rust-cache@v2
+        with:
+          workspaces: src-tauri
+      - run: npm ci
+      - name: Build app and DMG
+        env:
+          TAURI_SIGNING_PRIVATE_KEY: ${{ secrets.TAURI_SIGNING_PRIVATE_KEY }}
+          TAURI_SIGNING_PRIVATE_KEY_PASSWORD: ""
+        run: npx tauri build --target ${{ matrix.target }} --bundles app,dmg
+      - name: Name the artifacts as on the website
+        run: |
+          set -euo pipefail
+          VER=$(node -p "require('./src-tauri/tauri.conf.json').version.split('.').slice(0,2).join('.')")
+          B=src-tauri/target/${{ matrix.target }}/release/bundle
+          mkdir -p out
+          cp "$B"/dmg/*.dmg "out/KherveDB-$VER-macOS-${{ matrix.arch }}.dmg"
+          cp "out/KherveDB-$VER-macOS-${{ matrix.arch }}.dmg" "out/KherveDB-macOS-${{ matrix.arch }}.dmg"
+          cp "$B"/macos/KherveDB.app.tar.gz "out/KherveDB-$VER-macOS-${{ matrix.arch }}.app.tar.gz"
+          cp "$B"/macos/KherveDB.app.tar.gz.sig "out/KherveDB-$VER-macOS-${{ matrix.arch }}.app.tar.gz.sig"
+          (cd out && for f in *.dmg; do shasum -a 256 "$f" > "$f.sha256"; done)
+          codesign --verify --verbose "$B/macos/KherveDB.app"
+          plutil -p "$B/macos/KherveDB.app/Contents/Info.plist" | grep -E "CFBundleShortVersionString|LSMinimumSystemVersion"
+          lipo -archs "$B/macos/KherveDB.app/Contents/MacOS/khervedb"
+          ls -la out
+      - uses: actions/upload-artifact@v4
+        with:
+          name: KherveDB-macOS-${{ matrix.arch }}
+          path: out/*

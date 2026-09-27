@@ -48,7 +48,12 @@
     "createUpdaterArtifacts": true,
     "publisher": "Gwilherm Kerherve",
     "shortDescription": "NIST XPS binding-energy database",
-    "copyright": "Gwilherm Kerherve"
+    "copyright": "Gwilherm Kerherve",
+    "category": "Education",
+    "macOS": {
+      "minimumSystemVersion": "11.0",
+      "signingIdentity": "-"
+    }
   },
   "plugins": {
     "updater": {

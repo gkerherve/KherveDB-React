@@ -4,7 +4,8 @@ import PeriodicTable from "./PeriodicTable";
 import ResultsTable from "./ResultsTable";
 import { BePlot, FloatingWindow, InfoContent, RowDetails } from "./Popups";
 import { SOURCES } from "./sources";
-import { isDesktop, openReference } from "./platform";
+import { followElement, isDesktop, openInBrowser, openReferences } from "./platform";
+import { PROPERTY_GROUPS } from "./PropsPage";
 import "./App.css";
 
 type Popup =
@@ -12,12 +13,6 @@ type Popup =
   | { kind: "row"; row: number }
   | { kind: "plot" }
   | null;
-
-const PROPERTY_GROUPS: [string, string[]][] = [
-  ["Atomic", ["Atomic Number", "Atomic Mass", "Electron Configuration", "Ground State", "Electronegativity", "Atomic Radius", "Ionization Energy"]],
-  ["Physical", ["State at 20°C", "Density", "Melting Point", "Boiling Point", "Specific Heat"]],
-  ["XPS", ["Common Core Levels", "Most Intense Line", "Typical FWHM", "Chemical Shift Range"]],
-];
 
 export default function App() {
   const [data, setData] = useState<{ db: NistDb; meta: ElementsFile } | null>(null);
@@ -43,15 +38,30 @@ export default function App() {
     [db, element, line, formula, name],
   );
 
+  // Desktop: the references window follows the selected element
+  useEffect(() => {
+    if (element && meta) followElement(element, meta.elements[element]).catch(console.error);
+  }, [element, meta]);
+
+  const openRefs = useCallback(
+    (el: string) => {
+      if (isDesktop && meta) openReferences(el, meta.elements[el]).catch((e) => alert(String(e)));
+      else setPanelOpen(true);
+    },
+    [meta],
+  );
   const select = useCallback((el: string) => {
     setElement(el);
     setLine("");
   }, []);
-  const open = useCallback((el: string) => {
-    setElement(el);
-    setLine("");
-    setPanelOpen(true);
-  }, []);
+  const open = useCallback(
+    (el: string) => {
+      setElement(el);
+      setLine("");
+      openRefs(el);
+    },
+    [openRefs],
+  );
   const showInfo = useCallback((el: string, x: number, y: number) => setPopup({ kind: "info", el, x, y }), []);
 
   if (error) return <div className="loading">Could not load the NIST database: {error}</div>;
@@ -101,7 +111,7 @@ export default function App() {
           </button>
           <button
             className="primary big"
-            onClick={() => setPanelOpen((v) => !v)}
+            onClick={() => (isDesktop ? element && openRefs(element) : setPanelOpen((v) => !v))}
             title={
               "Open the reference panel for the selected element:\n" +
               "  • XPS Fitting (Biesinger), Harwell XPS Guru, Thermo Knowledge\n" +
@@ -128,10 +138,8 @@ export default function App() {
             <button className="icon" onClick={() => setPanelOpen(false)} aria-label="Close panel" title="Close">×</button>
           </header>
           <p className="hint">
-            Follows the element you click in the periodic table.{" "}
-            {isDesktop
-              ? "Sites open in their own window, with cookie banners declined automatically."
-              : "Sites open in a new browser tab."}
+            Follows the element you click in the periodic table. Sites open in a new browser tab
+            (the desktop app shows them in its own tabbed window).
           </p>
           {SOURCES.map((s) => (
             <SourceCard key={s.id + element} source={s} element={element} meta={meta} />
@@ -173,10 +181,9 @@ function FragmentRow({ k, v }: { k: string; v: string }) {
 
 function SourceCard({ source, element, meta }: { source: (typeof SOURCES)[number]; element: string; meta: ElementsFile }) {
   const [terms, setTerms] = useState("");
-  const go = () => {
-    const url = source.search ? source.search.query(terms.trim(), meta.elements[element].props.Name as string ?? element) : source.url!(element, meta.elements[element]);
-    openReference(`${source.title} – ${element}`, url);
-  };
+  const m = meta.elements[element];
+  const go = () =>
+    openInBrowser(source.search && terms.trim() ? source.search.query(terms.trim()) : source.url(element, m));
   return (
     <div className="card">
       <div className="card-title">{source.title}</div>

@@ -1,17 +1,29 @@
 // Desktop (Tauri) vs web differences.
+import type { ElementMeta } from "./data";
+import { tabsFor } from "./sources";
 
 export const isDesktop = typeof window !== "undefined" && "__TAURI_INTERNALS__" in window;
 
-/**
- * Open a reference website. On the desktop it opens in its own KherveDB window, where
- * cookie banners are declined automatically; on the web it opens in a new browser tab
- * (most of these sites refuse to be embedded in another page).
- */
-export async function openReference(title: string, url: string): Promise<void> {
-  if (isDesktop) {
-    const { invoke } = await import("@tauri-apps/api/core");
-    await invoke("open_reference", { title, url });
-  } else {
-    window.open(url, "_blank", "noopener");
-  }
+async function invoke<T = void>(cmd: string, args?: Record<string, unknown>): Promise<T> {
+  const core = await import("@tauri-apps/api/core");
+  return core.invoke<T>(cmd, args);
 }
+
+const refArgs = (el: string, m: ElementMeta) => ({ element: el, name: String(m.props.Name ?? el), tabs: tabsFor(el, m) });
+
+/** Desktop: open the tabbed "Other Databases & Properties" window for an element. */
+export function openReferences(el: string, m: ElementMeta) {
+  return invoke("open_references", refArgs(el, m));
+}
+
+/** Desktop: make the references window (if open) follow the selected element. */
+export function followElement(el: string, m: ElementMeta) {
+  return isDesktop ? invoke("update_references", refArgs(el, m)) : Promise.resolve();
+}
+
+/** Web: open a reference site in a new browser tab (these sites refuse to be embedded). */
+export function openInBrowser(url: string) {
+  window.open(url, "_blank", "noopener");
+}
+
+export { invoke };

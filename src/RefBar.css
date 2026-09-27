@@ -1,0 +1,65 @@
+html, body, #root { height: 100%; margin: 0; overflow: hidden; }
+.refbar {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--surface-2);
+  border-bottom: 1px solid var(--border);
+  font-size: 13px;
+}
+.tabs { display: flex; gap: 2px; padding: 4px 6px 0; height: 36px; flex: none; }
+.tabs button {
+  border: 1px solid var(--border);
+  border-bottom: none;
+  border-radius: 6px 6px 0 0;
+  background: var(--surface-2);
+  padding: 0 14px;
+  cursor: pointer;
+  color: var(--muted);
+}
+.tabs button:hover { color: var(--text); }
+.tabs button.active { background: var(--surface); color: var(--text); font-weight: 600; }
+.toolbar {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 0 8px;
+  height: 42px;
+  flex: none;
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+}
+.toolbar button {
+  height: 28px;
+  min-width: 32px;
+  padding: 0 8px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--surface-2);
+  cursor: pointer;
+}
+.toolbar button:hover { border-color: var(--accent); }
+.toolbar .el { font-weight: 700; font-size: 17px; min-width: 34px; text-align: center; margin-right: 6px; }
+.search { display: flex; gap: 4px; flex: 1; margin-left: 12px; }
+.search input {
+  flex: 1;
+  min-width: 0;
+  height: 28px;
+  padding: 0 8px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--surface);
+}
+.toolbar .go { background: var(--accent); color: var(--accent-text); border-color: transparent; font-weight: 600; }
+.hint {
+  margin: 0;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  background: var(--hint-bg);
+  color: var(--hint-text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

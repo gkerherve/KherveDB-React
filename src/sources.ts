@@ -4,12 +4,15 @@ export type Source = {
   id: string;
   title: string;
   help: string;
-  /** Needs a material typed by the user */
-  search?: { placeholder: string; query: (terms: string, el: string) => string };
-  url?: (el: string, meta: ElementMeta) => string;
+  /** Tabs with a search box: the material typed by the user refines the query */
+  search?: { placeholder: string; query: (terms: string) => string };
+  url: (el: string, meta: ElementMeta) => string;
 };
 
 const scholar = (q: string) => `https://scholar.google.com/scholar?q=${encodeURIComponent(q)}`;
+const sss = (t: string) => scholar(`source:"Surface Science Spectra" XPS ${t}`);
+const estr = (t: string) => scholar(`electronic structure ${t}`);
+const elName = (el: string, m: ElementMeta) => String(m.props.Name ?? el);
 
 export const SOURCES: Source[] = [
   {
@@ -34,20 +37,34 @@ export const SOURCES: Source[] = [
     id: "sss",
     title: "SSS from Scholar",
     help:
-      "Finds reference spectra published in Surface Science Spectra. Type a material (e.g. Fe2O3, NiO thin film): " +
+      "Reference spectra from Surface Science Spectra. Type a material in the search box (e.g. Fe2O3) and press Enter: " +
       'the search is refined to source:"Surface Science Spectra" XPS + your material.',
-    search: {
-      placeholder: "Material, e.g. Fe2O3",
-      query: (t, el) => scholar(`source:"Surface Science Spectra" XPS ${t || el}`),
-    },
+    search: { placeholder: "Material, e.g. Fe2O3", query: sss },
+    url: (el, m) => sss(elName(el, m)),
   },
   {
     id: "estr",
-    title: "Electronic structure (Scholar)",
-    help: "Finds papers on the electronic structure of a material. 'electronic structure' is added to your terms.",
-    search: {
-      placeholder: "Material, e.g. TiO2 anatase",
-      query: (t, el) => scholar(`electronic structure ${t || el}`),
-    },
+    title: "Good paper Scholar",
+    help:
+      "Papers on the electronic structure of a material. Type a material in the search box (e.g. TiO2 anatase) " +
+      "and press Enter: 'electronic structure' is added to your terms.",
+    search: { placeholder: "Material, e.g. TiO2 anatase", query: estr },
+    url: (el, m) => estr(elName(el, m)),
   },
 ];
+
+export const PROPS_TAB = {
+  id: "props",
+  title: "General Properties",
+  help: "Physical and atomic properties of the element, and its main XPS lines.",
+};
+
+export type TabSpec = { id: string; title: string; url: string };
+
+/** Tabs of the references window for one element. */
+export function tabsFor(el: string, m: ElementMeta): TabSpec[] {
+  return [
+    ...SOURCES.map((s) => ({ id: s.id, title: s.title, url: s.url(el, m) })),
+    { id: PROPS_TAB.id, title: PROPS_TAB.title, url: `app:index.html#props/${el}` },
+  ];
+}

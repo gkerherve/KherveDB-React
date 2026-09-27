@@ -222,3 +222,8 @@ button.icon { background: none; border: none; font-size: 20px; cursor: pointer; 
   .searchbar input { width: 110px; }
   .searchbar .big { margin-left: 0; }
 }
+
+/* ---------- General Properties tab (desktop references window) ---------- */
+.props-page { padding: 16px 20px; overflow-y: auto; height: 100%; background: var(--surface); }
+.props-page h3 { margin: 16px 0 6px; font-size: 15px; }
+.props-page .props { font-size: 14px; max-width: 640px; }

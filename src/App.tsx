@@ -6,6 +6,7 @@ import { BePlot, FloatingWindow, InfoContent, RowDetails } from "./Popups";
 import { SOURCES } from "./sources";
 import { followElement, isDesktop, openInBrowser, openReferences } from "./platform";
 import { PROPERTY_GROUPS } from "./PropsPage";
+import { SplashScreen, Updater, Welcome } from "./Startup";
 import "./App.css";
 
 type Popup =
@@ -25,7 +26,9 @@ export default function App() {
   const [panelOpen, setPanelOpen] = useState(false);
 
   useEffect(() => {
-    loadAll().then(setData, (e) => setError(String(e)));
+    // Keep the starting image up for at least 1.2 s so it does not just flash
+    const minimum = new Promise((r) => setTimeout(r, 1200));
+    Promise.all([loadAll(), minimum]).then(([d]) => setData(d), (e) => setError(String(e)));
   }, []);
 
   const db = data?.db;
@@ -65,7 +68,7 @@ export default function App() {
   const showInfo = useCallback((el: string, x: number, y: number) => setPopup({ kind: "info", el, x, y }), []);
 
   if (error) return <div className="loading">Could not load the NIST database: {error}</div>;
-  if (!db || !meta) return <div className="loading"><img src="icon.png" alt="" />Loading NIST library…</div>;
+  if (!db || !meta) return <SplashScreen />;
 
   const m = element ? meta.elements[element] : null;
 
@@ -120,7 +123,7 @@ export default function App() {
               "Tip: double-clicking an element also opens it."
             }
           >
-            Other Databases<br />&amp; Properties {panelOpen ? "◄" : "►"}
+            Other Databases &amp; Properties {panelOpen ? "◄" : "►"}
           </button>
         </section>
 
@@ -156,6 +159,8 @@ export default function App() {
         </aside>
       )}
 
+      <Welcome />
+      <Updater />
       {popup?.kind === "info" && (
         <FloatingWindow title={`${popup.el} – XPS information`} x={popup.x} y={popup.y} onClose={() => setPopup(null)}>
           <InfoContent el={popup.el} meta={meta} info={elementInfo(popup.el, meta, stats)} />

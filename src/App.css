@@ -94,8 +94,8 @@ button, input, select { font: inherit; color: inherit; }
 /* ---------- Search bar ---------- */
 .searchbar {
   display: flex;
-  flex-wrap: wrap;
-  align-items: stretch;
+  flex-wrap: nowrap;
+  align-items: flex-end;
   gap: 10px;
   background: var(--surface);
   border: 1px solid var(--border);
@@ -114,9 +114,10 @@ button, input, select { font: inherit; color: inherit; }
   font-size: 14px;
   min-width: 0;
 }
-.searchbar input { width: 150px; }
+.searchbar label:has(input) { flex: 1 1 90px; min-width: 0; max-width: 170px; }
+.searchbar input { width: 100%; }
 .el-box { display: grid; place-items: center; width: 60px; font-weight: 700; }
-.searchbar .big { margin-left: auto; }
+.searchbar button { height: 32px; white-space: nowrap; }
 
 button.primary, button.secondary {
   border-radius: 6px;
@@ -129,7 +130,7 @@ button.primary:hover { filter: brightness(1.1); }
 button.secondary { background: var(--surface-2); }
 button.secondary:hover { border-color: var(--accent); }
 button:disabled { opacity: 0.5; cursor: default; }
-button.big { font-size: 15px; line-height: 1.25; padding: 6px 20px; }
+button.big { font-size: 14px; padding: 0 18px; }
 button.icon { background: none; border: none; font-size: 20px; cursor: pointer; color: var(--muted); padding: 0 6px; }
 
 /* ---------- Results ---------- */
@@ -219,11 +220,19 @@ button.icon { background: none; border: none; font-size: 20px; cursor: pointer; 
   .app.with-panel { grid-template-columns: 1fr; }
   .panel { position: fixed; inset: 0; z-index: 40; }
   .tile .be, .tile .line, .tile .z { display: none; }
-  .searchbar input { width: 110px; }
-  .searchbar .big { margin-left: 0; }
+  .searchbar { flex-wrap: wrap; }
 }
 
 /* ---------- General Properties tab (desktop references window) ---------- */
 .props-page { padding: 16px 20px; overflow-y: auto; height: 100%; background: var(--surface); }
 .props-page h3 { margin: 16px 0 6px; font-size: 15px; }
 .props-page .props { font-size: 14px; max-width: 640px; }
+
+/* ---------- Starting image, welcome, update ---------- */
+.splash { height: 100%; display: grid; place-items: center; background: #14284f; }
+.splash img { width: min(600px, 90vw); height: auto; border-radius: 10px; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5); }
+.welcome img { width: 100%; height: auto; border-radius: 8px; display: block; }
+.welcome ul { margin: 12px 0; padding-left: 20px; line-height: 1.55; }
+.welcome-foot { display: flex; align-items: center; justify-content: flex-end; gap: 8px; margin-top: 8px; }
+.welcome-foot label { margin-right: auto; display: flex; align-items: center; gap: 6px; }
+.update-notes { white-space: pre-wrap; max-height: 200px; overflow: auto; }

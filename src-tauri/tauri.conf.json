@@ -1,7 +1,7 @@
 {
   "$schema": "../node_modules/@tauri-apps/cli/config.schema.json",
   "productName": "KherveDB",
-  "version": "0.1.0",
+  "version": "5.0.0",
   "identifier": "com.kerherve.khervedb",
   "build": {
     "frontendDist": "../dist",
@@ -13,10 +13,10 @@
     "windows": [
       {
         "title": "KherveDB",
-        "width": 760,
-        "height": 640,
-        "minWidth": 600,
-        "minHeight": 520,
+        "width": 960,
+        "height": 800,
+        "minWidth": 760,
+        "minHeight": 600,
         "resizable": true,
         "center": true
       }
@@ -43,6 +43,21 @@
       },
       "nsis": {
         "installMode": "currentUser"
+      }
+    },
+    "createUpdaterArtifacts": true,
+    "publisher": "Gwilherm Kerherve",
+    "shortDescription": "NIST XPS binding-energy database",
+    "copyright": "Gwilherm Kerherve"
+  },
+  "plugins": {
+    "updater": {
+      "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IEQyQzYzNzg1QzYwQ0EwNDIKUldSQ29BekdoVGZHMG54R0JVRnNGYXgwUEhWMkJ2YjhJYmowVWMxWGRvWnFmSDYvSXZqN2JUWmMK",
+      "endpoints": [
+        "https://github.com/gkerherve/KherveDB/releases/latest/download/latest.json"
+      ],
+      "windows": {
+        "installMode": "passive"
       }
     }
   }

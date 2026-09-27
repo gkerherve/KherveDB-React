@@ -164,7 +164,7 @@ pub async fn open_references(app: AppHandle, element: String, name: String, tabs
     } else {
         let win = WindowBuilder::new(&app, WINDOW)
             .title(format!("Other Databases & Properties – {element}"))
-            .inner_size(1100.0, 900.0)
+            .inner_size(800.0, 650.0)
             .min_inner_size(600.0, 400.0)
             .build()
             .map_err(|e| e.to_string())?;

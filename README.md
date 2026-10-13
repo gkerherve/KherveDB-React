@@ -35,3 +35,7 @@ npx tauri build      # installer in src-tauri/target/release/bundle/nsis
 Both are exported from the Python KherveDB (`NIST_BE.parquet` and `Main.py`).
 
 Developer: Gwilherm Kerherve
+
+## Licence
+
+GPL v3 or later. © 2026 Gwilherm Kerherve.

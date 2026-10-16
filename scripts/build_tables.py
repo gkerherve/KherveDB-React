@@ -9,6 +9,9 @@ Sources
     measured ("Direct") and theoretical K and L line energies.
   - Seah & Dench, Surf. Interface Anal. 1 (1979) 2: IMFP for elements,
     lambda = 538/E^2 + 0.41 (a E)^0.5 monolayers.
+  - Trzhaskovskaya & Yarzhemsky Dirac-Fock asymmetry parameters (beta) at
+    1.5-10 keV, digitised by Cant et al. on figshare (CC BY 4.0), in
+    data-sources/trzhaskovskaya/ (one CSV per element).
 
 Run:  python scripts/build_tables.py   (needs `pip install xraylib`)
 """
@@ -24,6 +27,11 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
 OUT = os.path.join(ROOT, "public", "data", "tables.bin")
 NIST_TSV = os.path.join(ROOT, "data-sources", "nist_xray_transitions.tsv")
+TRZ_DIR = os.path.join(ROOT, "data-sources", "trzhaskovskaya")
+
+# Photon-energy grid (keV) for cross sections and attenuation, log-spaced 30 eV - 15 keV
+GRID = [round(0.03 * (15 / 0.03) ** (i / 59), 5) for i in range(60)]
+TRZ_E = [1.5, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
 AL_KA, MG_KA = 1486.6, 1253.6  # eV
 NA = 6.02214076e23
@@ -85,12 +93,40 @@ def nist_lines():
     return out
 
 
+def trz_beta():
+    """{symbol: {orbital: [beta at TRZ_E]}} from the Trzhaskovskaya CSVs."""
+    out = {}
+    for f in os.listdir(TRZ_DIR):
+        rows = list(csv.reader(open(os.path.join(TRZ_DIR, f), encoding="utf-8-sig")))
+        if len(rows) < 6:
+            continue
+        sym = rows[0][1].strip()
+        shells = {}
+        for i in range(2, len(rows) - 3, 4):
+            name = rows[i][0].strip().replace("1/2", "").replace("s", "s") if rows[i][0].strip().startswith(tuple("123456")) else None
+            if not name:
+                continue
+            orb = rows[i][0].strip()
+            orb = orb[:-3] if orb.endswith("s1/2") else orb
+            try:
+                shells[orb] = [float(v) for v in rows[i + 1][2:12]]
+            except ValueError:
+                pass
+        out[sym] = shells
+    return out
+
+
+def sig(v, n=4):
+    return None if v is None else float(f"{v:.{n}g}")
+
+
 def r(v, n):
     return None if v is None else round(v, n)
 
 
 def main():
     nist = nist_lines()
+    beta = trz_beta()
     c1s = {e: barns(6, "K", e / 1000) for e in (AL_KA, MG_KA)}
     elements = {}
     for z, sym in enumerate(SYMBOLS, start=1):
@@ -109,6 +145,13 @@ def main():
                 row["ke" + tag] = r(ke, 1)
                 row["cs" + tag] = r(cs / c1s[hv], 3) if cs else None
                 row["imfp" + tag] = r(imfp_nm(z, ke), 2)
+            row["xs"] = [sig(barns(z, shell, e) if e * 1000 > be else None) for e in GRID]
+            b = beta.get(sym, {}).get(orb)
+            if b:
+                row["beta"] = [sig(v, 3) for v in b]
+            jump = safe(xr.JumpFactor, z, getattr(xr, shell + "_SHELL"))
+            if jump and shell in ("K", "L1", "L2", "L3", "M1", "M2", "M3", "M4", "M5"):
+                row["jump"] = r(jump, 3)
             levels.append(row)
 
         xlines = []
@@ -134,9 +177,10 @@ def main():
         elements[sym] = {
             "z": z, "density": r(safe(xr.ElementDensity, z), 3), "mass": r(xr.AtomicWeight(z), 3),
             "levels": levels, "xray": xlines, "yield": yields,
+            "mu": [sig(safe(xr.CS_Total, z, e)) for e in GRID],
         }
 
-    data = {"version": 1, "source": f"xraylib {xr.__version__}, NIST SRD 128", "elements": elements}
+    data = {"version": 2, "grid": GRID, "trzE": TRZ_E, "source": f"xraylib {xr.__version__}, NIST SRD 128", "elements": elements}
     raw = json.dumps(data, ensure_ascii=False, separators=(",", ":")).encode()
     with gzip.open(OUT, "wb", 9) as f:
         f.write(raw)

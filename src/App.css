@@ -276,3 +276,11 @@ button.icon { background: none; border: none; font-size: 20px; cursor: pointer; 
 .pref-list { list-style: none; padding: 0; margin: 8px 0 14px; display: grid; gap: 6px; }
 .pref-list label { display: flex; gap: 8px; align-items: center; cursor: pointer; }
 .modal footer { display: flex; gap: 8px; justify-content: flex-end; }
+.dt-source { display: flex; gap: 16px; align-items: center; margin-bottom: 8px; font-size: 13px; color: var(--muted); flex-wrap: wrap; }
+.dt-source select, .dt-source input { height: 28px; border: 1px solid var(--border); border-radius: 6px; background: var(--surface); color: var(--text); padding: 0 6px; }
+.dt-source input { width: 90px; }
+.dt-table tr.hl td { background: color-mix(in srgb, #4fbe9f 22%, transparent); font-weight: 600; }
+.dt-tabs button { padding: 6px 10px; }
+.dt-tabs { flex-wrap: wrap; overflow: visible; row-gap: 2px; }
+.dt-tabs button { border-bottom: 1px solid var(--border); border-radius: 6px 6px 0 0; }
+.dt-tabs button.active { border-bottom-color: var(--surface); }

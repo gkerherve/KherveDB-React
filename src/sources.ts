@@ -34,6 +34,15 @@ export const SOURCES: Source[] = [
     url: (_el, m) => m.urls.thermo,
   },
   {
+    id: "xpssurfa",
+    title: "XPSSurfA",
+    help:
+      "XPSSurfA (La Trobe University): open library of over 1600 measured reference spectra (Kratos AXIS Nova), " +
+      "downloadable under CC BY-NC 4.0. Type a material and press Enter to search the site.",
+    search: { placeholder: "Material, e.g. TiO2", query: (t) => `https://cmsshub.latrobe.edu.au/search/?terms=${encodeURIComponent(t)}` },
+    url: () => "https://cmsshub.latrobe.edu.au/xpsdatabase",
+  },
+  {
     id: "sss",
     title: "SSS from Scholar",
     help:

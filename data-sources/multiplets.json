@@ -1,0 +1,1804 @@
+[
+ {
+  "el": "Sc",
+  "compound": "Sc(0)",
+  "line": "2p",
+  "peaks": [
+   {
+    "be": 398.45,
+    "fwhm": 0.64,
+    "fwhm20": 0.76,
+    "area": null,
+    "label": "2p3/2"
+   },
+   {
+    "be": 403.19,
+    "fwhm": 0.72,
+    "fwhm20": 0.79,
+    "area": null,
+    "label": "2p1/2"
+   }
+  ],
+  "source": "Biesinger 2010, Table 1",
+  "note": "single chemical state doublet; fwhm = 10 eV pass energy, fwhm20 = 20 eV pass energy"
+ },
+ {
+  "el": "Sc",
+  "compound": "Sc(III) oxide (powder)",
+  "line": "2p",
+  "peaks": [
+   {
+    "be": 401.71,
+    "fwhm": 1.15,
+    "fwhm20": 1.18,
+    "area": null,
+    "label": "2p3/2"
+   },
+   {
+    "be": 406.16,
+    "fwhm": 1.54,
+    "fwhm20": 1.57,
+    "area": null,
+    "label": "2p1/2"
+   }
+  ],
+  "source": "Biesinger 2010, Table 1",
+  "note": "single chemical state doublet; fwhm = 10 eV pass energy, fwhm20 = 20 eV pass energy"
+ },
+ {
+  "el": "Sc",
+  "compound": "Thin air-formed oxide/hydrated (ScOOH peaks)",
+  "line": "2p",
+  "peaks": [
+   {
+    "be": 402.97,
+    "fwhm": 1.71,
+    "fwhm20": 1.71,
+    "area": null,
+    "label": "2p3/2"
+   },
+   {
+    "be": 407.46,
+    "fwhm": 2.18,
+    "fwhm20": 2.16,
+    "area": null,
+    "label": "2p1/2"
+   }
+  ],
+  "source": "Biesinger 2010, Table 1",
+  "note": "single chemical state doublet; fwhm = 10 eV pass energy, fwhm20 = 20 eV pass energy"
+ },
+ {
+  "el": "Sc",
+  "compound": "Thick air-formed oxide/fully hydrated",
+  "line": "2p",
+  "peaks": [
+   {
+    "be": 402.87,
+    "fwhm": 1.86,
+    "fwhm20": 1.87,
+    "area": null,
+    "label": "2p3/2"
+   },
+   {
+    "be": 407.45,
+    "fwhm": 2.3,
+    "fwhm20": 2.27,
+    "area": null,
+    "label": "2p1/2"
+   }
+  ],
+  "source": "Biesinger 2010, Table 1",
+  "note": "single chemical state doublet; fwhm = 10 eV pass energy, fwhm20 = 20 eV pass energy"
+ },
+ {
+  "el": "Ti",
+  "compound": "Ti(0)",
+  "line": "2p",
+  "peaks": [
+   {
+    "be": 453.74,
+    "fwhm": 0.59,
+    "fwhm20": 0.69,
+    "area": null,
+    "label": "2p3/2"
+   },
+   {
+    "be": 459.79,
+    "fwhm": 0.78,
+    "fwhm20": 0.83,
+    "area": null,
+    "label": "2p1/2"
+   }
+  ],
+  "source": "Biesinger 2010, Table 3",
+  "note": "single chemical state doublet; fwhm = 10 eV pass energy, fwhm20 = 20 eV pass energy"
+ },
+ {
+  "el": "Ti",
+  "compound": "Ti(IV) oxide (rutile)",
+  "line": "2p",
+  "peaks": [
+   {
+    "be": 458.46,
+    "fwhm": 0.99,
+    "fwhm20": 1.04,
+    "area": null,
+    "label": "2p3/2"
+   },
+   {
+    "be": 464.23,
+    "fwhm": 1.97,
+    "fwhm20": 2.01,
+    "area": null,
+    "label": "2p1/2"
+   }
+  ],
+  "source": "Biesinger 2010, Table 3",
+  "note": "single chemical state doublet; fwhm = 10 eV pass energy, fwhm20 = 20 eV pass energy"
+ },
+ {
+  "el": "Ti",
+  "compound": "Ti(IV) oxide (anatase)",
+  "line": "2p",
+  "peaks": [
+   {
+    "be": 458.59,
+    "fwhm": 0.98,
+    "fwhm20": 1.04,
+    "area": null,
+    "label": "2p3/2"
+   },
+   {
+    "be": 464.31,
+    "fwhm": 1.97,
+    "fwhm20": 1.98,
+    "area": null,
+    "label": "2p1/2"
+   }
+  ],
+  "source": "Biesinger 2010, Table 3",
+  "note": "single chemical state doublet; fwhm = 10 eV pass energy, fwhm20 = 20 eV pass energy"
+ },
+ {
+  "el": "V",
+  "compound": "V(0)",
+  "line": "2p",
+  "peaks": [
+   {
+    "be": 512.22,
+    "fwhm": 0.77,
+    "fwhm20": 0.83,
+    "area": null,
+    "label": "2p3/2"
+   },
+   {
+    "be": 519.75,
+    "fwhm": 1.11,
+    "fwhm20": 1.16,
+    "area": null,
+    "label": "2p1/2"
+   }
+  ],
+  "source": "Biesinger 2010, Table 6",
+  "note": "single chemical state doublet; fwhm = 10 eV pass energy, fwhm20 = 20 eV pass energy"
+ },
+ {
+  "el": "V",
+  "compound": "V(V) oxide",
+  "line": "2p",
+  "peaks": [
+   {
+    "be": 517.91,
+    "fwhm": 0.94,
+    "fwhm20": 1.01,
+    "area": null,
+    "label": "2p3/2"
+   },
+   {
+    "be": 525.26,
+    "fwhm": 2.47,
+    "fwhm20": 2.49,
+    "area": null,
+    "label": "2p1/2"
+   }
+  ],
+  "source": "Biesinger 2010, Table 6",
+  "note": "single chemical state doublet; fwhm = 10 eV pass energy, fwhm20 = 20 eV pass energy"
+ },
+ {
+  "el": "Cu",
+  "compound": "Cu(II) oxide",
+  "line": "2p3/2",
+  "peaks": [
+   {
+    "be": 933.11,
+    "fwhm": 2.07,
+    "area": 31
+   },
+   {
+    "be": 934.48,
+    "fwhm": 3.05,
+    "area": 33
+   },
+   {
+    "be": 940.52,
+    "fwhm": 1.03,
+    "area": 3
+   },
+   {
+    "be": 941.66,
+    "fwhm": 3.55,
+    "area": 28
+   },
+   {
+    "be": 943.71,
+    "fwhm": 1.17,
+    "area": 6
+   }
+  ],
+  "source": "Biesinger 2010, Table 9",
+  "note": "fwhm = 20 eV pass energy"
+ },
+ {
+  "el": "Cu",
+  "compound": "Cu(II) hydroxide",
+  "line": "2p3/2",
+  "peaks": [
+   {
+    "be": 934.67,
+    "fwhm": 2.85,
+    "area": 60
+   },
+   {
+    "be": 939.3,
+    "fwhm": 2.8,
+    "area": 6
+   },
+   {
+    "be": 942.2,
+    "fwhm": 3.66,
+    "area": 28
+   },
+   {
+    "be": 944.12,
+    "fwhm": 1.76,
+    "area": 7
+   }
+  ],
+  "source": "Biesinger 2010, Table 9",
+  "note": "fwhm = 20 eV pass energy"
+ },
+ {
+  "el": "Cr",
+  "compound": "Cr(0)",
+  "line": "2p3/2",
+  "peaks": [
+   {
+    "be": 574.2,
+    "fwhm": 0.8,
+    "area": 100,
+    "fwhm20": 0.9
+   }
+  ],
+  "source": "Biesinger 2011, Table 1",
+  "note": "fwhm = 10 eV pass energy, fwhm20 = 20 eV pass energy"
+ },
+ {
+  "el": "Cr",
+  "compound": "Cr(III) oxide",
+  "line": "2p3/2",
+  "peaks": [
+   {
+    "be": 575.7,
+    "fwhm": 0.88,
+    "area": 36,
+    "fwhm20": 0.94
+   },
+   {
+    "be": 576.7,
+    "fwhm": 0.88,
+    "area": 35,
+    "fwhm20": 0.94
+   },
+   {
+    "be": 577.5,
+    "fwhm": 0.88,
+    "area": 19,
+    "fwhm20": 0.94
+   },
+   {
+    "be": 578.5,
+    "fwhm": 0.88,
+    "area": 8,
+    "fwhm20": 0.94
+   },
+   {
+    "be": 578.9,
+    "fwhm": 0.88,
+    "area": 5,
+    "fwhm20": 0.94
+   }
+  ],
+  "source": "Biesinger 2011, Table 1",
+  "note": "fwhm = 10 eV pass energy, fwhm20 = 20 eV pass energy; areas as printed sum to 103"
+ },
+ {
+  "el": "Cr",
+  "compound": "Cr(III) hydroxide",
+  "line": "2p3/2",
+  "peaks": [
+   {
+    "be": 577.3,
+    "fwhm": 2.58,
+    "area": 100,
+    "fwhm20": 2.6
+   }
+  ],
+  "source": "Biesinger 2011, Table 1",
+  "note": "fwhm = 10 eV pass energy, fwhm20 = 20 eV pass energy; aged hydroxide, fresh = 577.1 eV"
+ },
+ {
+  "el": "Cr",
+  "compound": "FeCr2O4 (Chromite)",
+  "line": "2p3/2",
+  "peaks": [
+   {
+    "be": 575.9,
+    "fwhm": 1.12,
+    "area": 41,
+    "fwhm20": 1.2
+   },
+   {
+    "be": 577.0,
+    "fwhm": 1.12,
+    "area": 39,
+    "fwhm20": 1.2
+   },
+   {
+    "be": 577.9,
+    "fwhm": 1.12,
+    "area": 13,
+    "fwhm20": 1.2
+   },
+   {
+    "be": 578.9,
+    "fwhm": 1.12,
+    "area": 7,
+    "fwhm20": 1.2
+   }
+  ],
+  "source": "Biesinger 2011, Table 1",
+  "note": "fwhm = 10 eV pass energy, fwhm20 = 20 eV pass energy"
+ },
+ {
+  "el": "Cr",
+  "compound": "NiCr2O4",
+  "line": "2p3/2",
+  "peaks": [
+   {
+    "be": 575.2,
+    "fwhm": null,
+    "area": 35
+   },
+   {
+    "be": 576.2,
+    "fwhm": null,
+    "area": 34
+   },
+   {
+    "be": 577.0,
+    "fwhm": null,
+    "area": 18
+   },
+   {
+    "be": 578.1,
+    "fwhm": null,
+    "area": 9
+   },
+   {
+    "be": 579.2,
+    "fwhm": null,
+    "area": 4
+   }
+  ],
+  "source": "Biesinger 2011, Table 1",
+  "note": "only one FWHM (1.09) printed, pass energy unclear, left null"
+ },
+ {
+  "el": "Cr",
+  "compound": "Cr(VI) mixed species",
+  "line": "2p3/2",
+  "peaks": [
+   {
+    "be": 579.5,
+    "fwhm": 1.4,
+    "area": 100,
+    "fwhm20": 1.5
+   }
+  ],
+  "source": "Biesinger 2011, Table 1",
+  "note": "fwhm = 10 eV pass energy, fwhm20 = 20 eV pass energy"
+ },
+ {
+  "el": "Cr",
+  "compound": "Cr(VI) oxide",
+  "line": "2p3/2",
+  "peaks": [
+   {
+    "be": 579.6,
+    "fwhm": 1.28,
+    "area": 100,
+    "fwhm20": 1.38
+   }
+  ],
+  "source": "Biesinger 2011, Table 1",
+  "note": "fwhm = 10 eV pass energy, fwhm20 = 20 eV pass energy"
+ },
+ {
+  "el": "Mn",
+  "compound": "Mn(0)",
+  "line": "2p3/2",
+  "peaks": [
+   {
+    "be": 638.6,
+    "fwhm": 1.14,
+    "area": 100.0
+   }
+  ],
+  "source": "Biesinger 2011, Table 2",
+  "note": "fwhm = SSX-100, 25 eV pass energy (lit. refs 11-14)"
+ },
+ {
+  "el": "Mn",
+  "compound": "Mn(II), MnO",
+  "line": "2p3/2",
+  "peaks": [
+   {
+    "be": 640.3,
+    "fwhm": 1.7,
+    "area": 34.4
+   },
+   {
+    "be": 641.5,
+    "fwhm": 1.7,
+    "area": 26.2
+   },
+   {
+    "be": 642.3,
+    "fwhm": 1.7,
+    "area": 16.9
+   },
+   {
+    "be": 643.2,
+    "fwhm": 1.7,
+    "area": 8.6
+   },
+   {
+    "be": 647.5,
+    "fwhm": 1.7,
+    "area": 3.5
+   },
+   {
+    "be": 645.0,
+    "fwhm": 3.5,
+    "area": 10.6
+   }
+  ],
+  "source": "Biesinger 2011, Table 2",
+  "note": "fwhm = SSX-100, 25 eV pass energy (lit. refs 11-14); peak 6 is a satellite"
+ },
+ {
+  "el": "Mn",
+  "compound": "Mn(III), Manganite (MnOOH)",
+  "line": "2p3/2",
+  "peaks": [
+   {
+    "be": 641.2,
+    "fwhm": 1.25,
+    "area": 24.0
+   },
+   {
+    "be": 641.9,
+    "fwhm": 1.25,
+    "area": 24.0
+   },
+   {
+    "be": 642.7,
+    "fwhm": 1.25,
+    "area": 27.8
+   },
+   {
+    "be": 643.7,
+    "fwhm": 1.25,
+    "area": 17.5
+   },
+   {
+    "be": 645.1,
+    "fwhm": 1.25,
+    "area": 6.7
+   }
+  ],
+  "source": "Biesinger 2011, Table 2",
+  "note": "fwhm = SSX-100, 25 eV pass energy (lit. refs 11-14)"
+ },
+ {
+  "el": "Mn",
+  "compound": "Mn(IV), Birnessite (MnO2)",
+  "line": "2p3/2",
+  "peaks": [
+   {
+    "be": 642.5,
+    "fwhm": 1.25,
+    "area": 47.9
+   },
+   {
+    "be": 643.5,
+    "fwhm": 1.3,
+    "area": 30.6
+   },
+   {
+    "be": 644.3,
+    "fwhm": 1.3,
+    "area": 45.3
+   },
+   {
+    "be": 645.3,
+    "fwhm": 1.3,
+    "area": 4.8
+   },
+   {
+    "be": 646.4,
+    "fwhm": 1.25,
+    "area": 2.9
+   }
+  ],
+  "source": "Biesinger 2011, Table 2",
+  "note": "fwhm = SSX-100, 25 eV pass energy (lit. refs 11-14); areas as printed sum to 131.5 (peak 3 45.3 probably a typo in the paper)"
+ },
+ {
+  "el": "Mn",
+  "compound": "Mn(0)",
+  "line": "2p3/2",
+  "peaks": [
+   {
+    "be": 638.6,
+    "fwhm": 0.74,
+    "area": 87.0,
+    "fwhm20": 0.79
+   },
+   {
+    "be": 639.6,
+    "fwhm": 0.74,
+    "area": 13.0,
+    "fwhm20": 0.79
+   }
+  ],
+  "source": "Biesinger 2011, Table 3",
+  "note": "fwhm = 10 eV pass energy, fwhm20 = 20 eV pass energy"
+ },
+ {
+  "el": "Mn",
+  "compound": "Mn(II) MnO",
+  "line": "2p3/2",
+  "peaks": [
+   {
+    "be": 640.2,
+    "fwhm": 1.21,
+    "area": 24.0,
+    "fwhm20": 1.23
+   },
+   {
+    "be": 641.1,
+    "fwhm": 1.21,
+    "area": 27.8,
+    "fwhm20": 1.23
+   },
+   {
+    "be": 642.1,
+    "fwhm": 1.21,
+    "area": 22.1,
+    "fwhm20": 1.23
+   },
+   {
+    "be": 643.0,
+    "fwhm": 1.21,
+    "area": 12.5,
+    "fwhm20": 1.23
+   },
+   {
+    "be": 644.2,
+    "fwhm": 1.21,
+    "area": 4.7,
+    "fwhm20": 1.23
+   },
+   {
+    "be": 645.9,
+    "fwhm": 3.5,
+    "area": 9.1,
+    "fwhm20": 3.5
+   }
+  ],
+  "source": "Biesinger 2011, Table 3",
+  "note": "fwhm = 10 eV pass energy, fwhm20 = 20 eV pass energy; peak 6 shake-up, FWHM 3.5 (footnote c)"
+ },
+ {
+  "el": "Mn",
+  "compound": "Mn(III) Mn2O3",
+  "line": "2p3/2",
+  "peaks": [
+   {
+    "be": 640.8,
+    "fwhm": 1.65,
+    "area": 18.9,
+    "fwhm20": 1.75
+   },
+   {
+    "be": 641.9,
+    "fwhm": 1.65,
+    "area": 44.5,
+    "fwhm20": 1.75
+   },
+   {
+    "be": 643.1,
+    "fwhm": 1.65,
+    "area": 25.3,
+    "fwhm20": 1.75
+   },
+   {
+    "be": 644.6,
+    "fwhm": 1.65,
+    "area": 8.5,
+    "fwhm20": 1.75
+   },
+   {
+    "be": 646.2,
+    "fwhm": 1.65,
+    "area": 3.1,
+    "fwhm20": 1.75
+   }
+  ],
+  "source": "Biesinger 2011, Table 3",
+  "note": "fwhm = 10 eV pass energy, fwhm20 = 20 eV pass energy"
+ },
+ {
+  "el": "Mn",
+  "compound": "Mn(III) Manganite (MnOOH)",
+  "line": "2p3/2",
+  "peaks": [
+   {
+    "be": 641.0,
+    "fwhm": 1.34,
+    "area": 24.0,
+    "fwhm20": 1.35
+   },
+   {
+    "be": 641.7,
+    "fwhm": 1.34,
+    "area": 24.0,
+    "fwhm20": 1.35
+   },
+   {
+    "be": 642.5,
+    "fwhm": 1.34,
+    "area": 27.8,
+    "fwhm20": 1.35
+   },
+   {
+    "be": 643.5,
+    "fwhm": 1.34,
+    "area": 17.5,
+    "fwhm20": 1.35
+   },
+   {
+    "be": 644.9,
+    "fwhm": 1.34,
+    "area": 6.7,
+    "fwhm20": 1.35
+   }
+  ],
+  "source": "Biesinger 2011, Table 3",
+  "note": "fwhm = 10 eV pass energy, fwhm20 = 20 eV pass energy"
+ },
+ {
+  "el": "Mn",
+  "compound": "Mn(IV) MnO2",
+  "line": "2p3/2",
+  "peaks": [
+   {
+    "be": 641.9,
+    "fwhm": 0.84,
+    "area": 41.7,
+    "fwhm20": 0.91
+   },
+   {
+    "be": 642.7,
+    "fwhm": 0.84,
+    "area": 26.5,
+    "fwhm20": 0.91
+   },
+   {
+    "be": 643.4,
+    "fwhm": 0.84,
+    "area": 15.5,
+    "fwhm20": 0.91
+   },
+   {
+    "be": 644.2,
+    "fwhm": 0.84,
+    "area": 9.1,
+    "fwhm20": 0.91
+   },
+   {
+    "be": 645.0,
+    "fwhm": 0.84,
+    "area": 4.9,
+    "fwhm20": 0.91
+   },
+   {
+    "be": 646.0,
+    "fwhm": 0.84,
+    "area": 2.5,
+    "fwhm20": 0.91
+   }
+  ],
+  "source": "Biesinger 2011, Table 3",
+  "note": "fwhm = 10 eV pass energy, fwhm20 = 20 eV pass energy"
+ },
+ {
+  "el": "Mn",
+  "compound": "Mn(IV) Pyrolusite (MnO2)",
+  "line": "2p3/2",
+  "peaks": [
+   {
+    "be": 641.8,
+    "fwhm": 0.92,
+    "area": 21.0,
+    "fwhm20": 0.99
+   },
+   {
+    "be": 642.7,
+    "fwhm": 0.92,
+    "area": 27.4,
+    "fwhm20": 0.99
+   },
+   {
+    "be": 643.5,
+    "fwhm": 0.92,
+    "area": 16.1,
+    "fwhm20": 0.99
+   },
+   {
+    "be": 644.3,
+    "fwhm": 0.92,
+    "area": 8.9,
+    "fwhm20": 0.99
+   },
+   {
+    "be": 645.2,
+    "fwhm": 0.92,
+    "area": 4.6,
+    "fwhm20": 0.99
+   },
+   {
+    "be": 646.2,
+    "fwhm": 0.92,
+    "area": 2.1,
+    "fwhm20": 0.99
+   }
+  ],
+  "source": "Biesinger 2011, Table 3",
+  "note": "fwhm = 10 eV pass energy, fwhm20 = 20 eV pass energy; areas as printed sum to 80.1"
+ },
+ {
+  "el": "Mn",
+  "compound": "Mn(VI) K2MnO4",
+  "line": "2p3/2",
+  "peaks": [
+   {
+    "be": 643.8,
+    "fwhm": 1.31,
+    "area": 100.0,
+    "fwhm20": 1.4
+   }
+  ],
+  "source": "Biesinger 2011, Table 3",
+  "note": "fwhm = 10 eV pass energy, fwhm20 = 20 eV pass energy"
+ },
+ {
+  "el": "Mn",
+  "compound": "Mn(VII) KMnO4",
+  "line": "2p3/2",
+  "peaks": [
+   {
+    "be": 645.5,
+    "fwhm": 0.98,
+    "area": 100.0,
+    "fwhm20": 1.08
+   }
+  ],
+  "source": "Biesinger 2011, Table 3",
+  "note": "fwhm = 10 eV pass energy, fwhm20 = 20 eV pass energy"
+ },
+ {
+  "el": "Fe",
+  "compound": "Fe(0)",
+  "line": "2p3/2",
+  "peaks": [
+   {
+    "be": 706.6,
+    "fwhm": 0.88,
+    "area": 100.0
+   }
+  ],
+  "source": "Biesinger 2011, Table 4",
+  "note": "fwhm = 10 eV pass energy"
+ },
+ {
+  "el": "Fe",
+  "compound": "FeO",
+  "line": "2p3/2",
+  "peaks": [
+   {
+    "be": 708.4,
+    "fwhm": 1.4,
+    "area": 24.2
+   },
+   {
+    "be": 709.7,
+    "fwhm": 1.6,
+    "area": 30.1
+   },
+   {
+    "be": 710.9,
+    "fwhm": 1.6,
+    "area": 14.5
+   },
+   {
+    "be": 712.1,
+    "fwhm": 2.9,
+    "area": 25.6
+   },
+   {
+    "be": 715.4,
+    "fwhm": 2.5,
+    "area": 5.6
+   }
+  ],
+  "source": "Biesinger 2011, Table 4",
+  "note": "fwhm = 10 eV pass energy"
+ },
+ {
+  "el": "Fe",
+  "compound": "α-Fe2O3",
+  "line": "2p3/2",
+  "peaks": [
+   {
+    "be": 709.8,
+    "fwhm": 1.0,
+    "area": 26.1
+   },
+   {
+    "be": 710.7,
+    "fwhm": 1.2,
+    "area": 22.0
+   },
+   {
+    "be": 711.4,
+    "fwhm": 1.2,
+    "area": 17.4
+   },
+   {
+    "be": 713.3,
+    "fwhm": 1.4,
+    "area": 11.1
+   },
+   {
+    "be": 713.3,
+    "fwhm": 2.2,
+    "area": 14.8
+   },
+   {
+    "be": 719.3,
+    "fwhm": 2.9,
+    "area": 8.6
+   }
+  ],
+  "source": "Biesinger 2011, Table 4",
+  "note": "fwhm = 10 eV pass energy; Greek prefix lost in extraction, alpha/gamma assigned by row order (alpha first, as in the paper); peak 4 BE printed 713.3 (dE says 712.3)"
+ },
+ {
+  "el": "Fe",
+  "compound": "γ-Fe2O3",
+  "line": "2p3/2",
+  "peaks": [
+   {
+    "be": 709.8,
+    "fwhm": 1.2,
+    "area": 27.4
+   },
+   {
+    "be": 710.8,
+    "fwhm": 1.3,
+    "area": 27.4
+   },
+   {
+    "be": 711.8,
+    "fwhm": 1.4,
+    "area": 20.3
+   },
+   {
+    "be": 713.0,
+    "fwhm": 1.4,
+    "area": 9.1
+   },
+   {
+    "be": 714.1,
+    "fwhm": 1.7,
+    "area": 5.1
+   },
+   {
+    "be": 719.3,
+    "fwhm": 2.2,
+    "area": 10.0
+   }
+  ],
+  "source": "Biesinger 2011, Table 4",
+  "note": "fwhm = 10 eV pass energy; Greek prefix lost in extraction, alpha/gamma assigned by row order (alpha first, as in the paper)"
+ },
+ {
+  "el": "Fe",
+  "compound": "Ave. Fe2O3",
+  "line": "2p3/2",
+  "peaks": [
+   {
+    "be": 709.8,
+    "fwhm": 1.1,
+    "area": 26.8
+   },
+   {
+    "be": 710.8,
+    "fwhm": 1.3,
+    "area": 24.7
+   },
+   {
+    "be": 711.6,
+    "fwhm": 1.3,
+    "area": 18.9
+   },
+   {
+    "be": 712.7,
+    "fwhm": 1.4,
+    "area": 10.1
+   },
+   {
+    "be": 713.7,
+    "fwhm": 2.0,
+    "area": 10.0
+   },
+   {
+    "be": 719.3,
+    "fwhm": 2.6,
+    "area": 9.3
+   }
+  ],
+  "source": "Biesinger 2011, Table 4",
+  "note": "fwhm = 10 eV pass energy"
+ },
+ {
+  "el": "Fe",
+  "compound": "α-FeOOH",
+  "line": "2p3/2",
+  "peaks": [
+   {
+    "be": 710.2,
+    "fwhm": 1.3,
+    "area": 26.7
+   },
+   {
+    "be": 711.2,
+    "fwhm": 1.2,
+    "area": 25.3
+   },
+   {
+    "be": 712.1,
+    "fwhm": 1.4,
+    "area": 21.0
+   },
+   {
+    "be": 711.2,
+    "fwhm": 1.4,
+    "area": 12.1
+   },
+   {
+    "be": 714.4,
+    "fwhm": 1.7,
+    "area": 7.2
+   },
+   {
+    "be": 719.8,
+    "fwhm": 3.0,
+    "area": 7.7
+   }
+  ],
+  "source": "Biesinger 2011, Table 4",
+  "note": "fwhm = 10 eV pass energy; Greek prefix lost in extraction, alpha/gamma assigned by row order (alpha first, as in the paper); peak 4 BE printed 711.2 (dE 1.21 implies ~713.3)"
+ },
+ {
+  "el": "Fe",
+  "compound": "γ-FeOOH",
+  "line": "2p3/2",
+  "peaks": [
+   {
+    "be": 710.3,
+    "fwhm": 1.4,
+    "area": 27.3
+   },
+   {
+    "be": 711.3,
+    "fwhm": 1.4,
+    "area": 27.6
+   },
+   {
+    "be": 712.3,
+    "fwhm": 1.4,
+    "area": 20.1
+   },
+   {
+    "be": 713.3,
+    "fwhm": 1.4,
+    "area": 10.5
+   },
+   {
+    "be": 714.4,
+    "fwhm": 1.8,
+    "area": 5.4
+   },
+   {
+    "be": 719.5,
+    "fwhm": 2.8,
+    "area": 8.9
+   }
+  ],
+  "source": "Biesinger 2011, Table 4",
+  "note": "fwhm = 10 eV pass energy; Greek prefix lost in extraction, alpha/gamma assigned by row order (alpha first, as in the paper)"
+ },
+ {
+  "el": "Fe",
+  "compound": "Ave. FeOOH",
+  "line": "2p3/2",
+  "peaks": [
+   {
+    "be": 710.3,
+    "fwhm": 1.4,
+    "area": 27.0
+   },
+   {
+    "be": 711.3,
+    "fwhm": 1.3,
+    "area": 26.5
+   },
+   {
+    "be": 712.2,
+    "fwhm": 1.4,
+    "area": 20.6
+   },
+   {
+    "be": 713.3,
+    "fwhm": 1.4,
+    "area": 11.3
+   },
+   {
+    "be": 714.4,
+    "fwhm": 1.8,
+    "area": 6.3
+   },
+   {
+    "be": 719.7,
+    "fwhm": 2.9,
+    "area": 8.3
+   }
+  ],
+  "source": "Biesinger 2011, Table 4",
+  "note": "fwhm = 10 eV pass energy"
+ },
+ {
+  "el": "Fe",
+  "compound": "Average Fe(III)",
+  "line": "2p3/2",
+  "peaks": [
+   {
+    "be": 710.0,
+    "fwhm": 1.2,
+    "area": 26.9
+   },
+   {
+    "be": 711.0,
+    "fwhm": 1.3,
+    "area": 25.6
+   },
+   {
+    "be": 711.9,
+    "fwhm": 1.4,
+    "area": 19.7
+   },
+   {
+    "be": 713.0,
+    "fwhm": 1.4,
+    "area": 10.7
+   },
+   {
+    "be": 714.1,
+    "fwhm": 1.9,
+    "area": 8.1
+   },
+   {
+    "be": 719.5,
+    "fwhm": 2.7,
+    "area": 8.8
+   }
+  ],
+  "source": "Biesinger 2011, Table 4",
+  "note": "fwhm = 10 eV pass energy"
+ },
+ {
+  "el": "Fe",
+  "compound": "Fe3O4 (Fe2+)",
+  "line": "2p3/2",
+  "peaks": [
+   {
+    "be": 708.4,
+    "fwhm": 1.2,
+    "area": 16.6
+   },
+   {
+    "be": 709.2,
+    "fwhm": 1.2,
+    "area": 14.8
+   }
+  ],
+  "source": "Biesinger 2011, Table 4",
+  "note": "fwhm = 10 eV pass energy; sum of 2+ and 3+ areas is 100"
+ },
+ {
+  "el": "Fe",
+  "compound": "Fe3O4 (Fe3+)",
+  "line": "2p3/2",
+  "peaks": [
+   {
+    "be": 710.2,
+    "fwhm": 1.4,
+    "area": 23.7
+   },
+   {
+    "be": 711.2,
+    "fwhm": 1.4,
+    "area": 17.8
+   },
+   {
+    "be": 712.3,
+    "fwhm": 1.4,
+    "area": 12.2
+   },
+   {
+    "be": 713.4,
+    "fwhm": 1.4,
+    "area": 5.7
+   },
+   {
+    "be": 714.5,
+    "fwhm": 3.3,
+    "area": 9.1
+   }
+  ],
+  "source": "Biesinger 2011, Table 4",
+  "note": "fwhm = 10 eV pass energy; sum of 2+ and 3+ areas is 100; 3+ satellite omitted"
+ },
+ {
+  "el": "Fe",
+  "compound": "FeCr2O4 (Chromite)",
+  "line": "2p3/2",
+  "peaks": [
+   {
+    "be": 709.0,
+    "fwhm": 2.0,
+    "area": 40.5
+   },
+   {
+    "be": 710.3,
+    "fwhm": 1.5,
+    "area": 12.9
+   },
+   {
+    "be": 711.2,
+    "fwhm": 1.5,
+    "area": 17.8
+   },
+   {
+    "be": 713.0,
+    "fwhm": 1.5,
+    "area": 8.3
+   },
+   {
+    "be": 713.8,
+    "fwhm": 3.6,
+    "area": 20.6
+   }
+  ],
+  "source": "Biesinger 2011, Table 4",
+  "note": "fwhm = 20 eV pass energy; printed dE for peaks 4-5 (1.2, 1.4) do not match printed BEs"
+ },
+ {
+  "el": "Fe",
+  "compound": "NiFe2O4",
+  "line": "2p3/2",
+  "peaks": [
+   {
+    "be": 709.5,
+    "fwhm": 2.0,
+    "area": 34.1
+   },
+   {
+    "be": 710.7,
+    "fwhm": 2.0,
+    "area": 33.2
+   },
+   {
+    "be": 712.2,
+    "fwhm": 2.0,
+    "area": 22.3
+   },
+   {
+    "be": 713.7,
+    "fwhm": 2.0,
+    "area": 10.4
+   }
+  ],
+  "source": "Biesinger 2011, Table 4",
+  "note": "fwhm = 10 eV pass energy"
+ },
+ {
+  "el": "Fe",
+  "compound": "FeCO3 (Siderite)",
+  "line": "2p3/2",
+  "peaks": [
+   {
+    "be": 709.8,
+    "fwhm": 1.5,
+    "area": 24.3
+   },
+   {
+    "be": 711.1,
+    "fwhm": 1.5,
+    "area": 13.2
+   },
+   {
+    "be": 712.0,
+    "fwhm": 3.6,
+    "area": 41.9
+   },
+   {
+    "be": 715.6,
+    "fwhm": 3.4,
+    "area": 20.0
+   },
+   {
+    "be": 719.4,
+    "fwhm": 1.5,
+    "area": 0.7
+   }
+  ],
+  "source": "Biesinger 2011, Table 4",
+  "note": "fwhm = 10 eV pass energy"
+ },
+ {
+  "el": "Co",
+  "compound": "Co(0)",
+  "line": "2p3/2",
+  "peaks": [
+   {
+    "be": 778.1,
+    "fwhm": 0.7,
+    "area": 81.0,
+    "fwhm20": 0.75
+   },
+   {
+    "be": 781.1,
+    "fwhm": 3.0,
+    "area": 11.0,
+    "fwhm20": 3.0
+   },
+   {
+    "be": 783.1,
+    "fwhm": 3.0,
+    "area": 8.0,
+    "fwhm20": 3.0
+   }
+  ],
+  "source": "Biesinger 2011, Table 5",
+  "note": "fwhm = 10 eV pass energy, fwhm20 = 20 eV pass energy"
+ },
+ {
+  "el": "Co",
+  "compound": "CoO",
+  "line": "2p3/2",
+  "peaks": [
+   {
+    "be": 780.0,
+    "fwhm": 2.23,
+    "area": 46.6,
+    "fwhm20": 2.24
+   },
+   {
+    "be": 782.1,
+    "fwhm": 2.59,
+    "area": 25.7,
+    "fwhm20": 2.66
+   },
+   {
+    "be": 785.5,
+    "fwhm": 2.42,
+    "area": 1.6,
+    "fwhm20": 2.29
+   },
+   {
+    "be": 786.5,
+    "fwhm": 5.28,
+    "area": 26.1,
+    "fwhm20": 4.98
+   }
+  ],
+  "source": "Biesinger 2011, Table 5",
+  "note": "fwhm = 10 eV pass energy, fwhm20 = 20 eV pass energy"
+ },
+ {
+  "el": "Co",
+  "compound": "Co(OH)2",
+  "line": "2p3/2",
+  "peaks": [
+   {
+    "be": 780.4,
+    "fwhm": 2.01,
+    "area": 38.1,
+    "fwhm20": 2.04
+   },
+   {
+    "be": 782.2,
+    "fwhm": 2.6,
+    "area": 26.6,
+    "fwhm20": 2.55
+   },
+   {
+    "be": 786.0,
+    "fwhm": 4.47,
+    "area": 33.0,
+    "fwhm20": 4.47
+   },
+   {
+    "be": 790.4,
+    "fwhm": 2.33,
+    "area": 2.4,
+    "fwhm20": 2.33
+   }
+  ],
+  "source": "Biesinger 2011, Table 5",
+  "note": "fwhm = 10 eV pass energy, fwhm20 = 20 eV pass energy"
+ },
+ {
+  "el": "Co",
+  "compound": "CoOOH",
+  "line": "2p3/2",
+  "peaks": [
+   {
+    "be": 780.1,
+    "fwhm": 1.48,
+    "area": 61.4
+   },
+   {
+    "be": 781.4,
+    "fwhm": 1.48,
+    "area": 24.5
+   },
+   {
+    "be": 783.1,
+    "fwhm": 1.48,
+    "area": 5.2
+   },
+   {
+    "be": 790.1,
+    "fwhm": 3.3,
+    "area": 8.9
+   }
+  ],
+  "source": "Biesinger 2011, Table 5",
+  "note": "fit of digitized spectrum (ref 54); one FWHM per peak printed, pass energy not given"
+ },
+ {
+  "el": "Co",
+  "compound": "Co3O4",
+  "line": "2p3/2",
+  "peaks": [
+   {
+    "be": 779.6,
+    "fwhm": 1.38,
+    "area": 40.5,
+    "fwhm20": 1.39
+   },
+   {
+    "be": 780.9,
+    "fwhm": 1.55,
+    "area": 29.1,
+    "fwhm20": 1.62
+   },
+   {
+    "be": 782.2,
+    "fwhm": 1.94,
+    "area": 15.2,
+    "fwhm20": 2.18
+   },
+   {
+    "be": 785.2,
+    "fwhm": 4.28,
+    "area": 8.1,
+    "fwhm20": 4.44
+   },
+   {
+    "be": 789.5,
+    "fwhm": 3.15,
+    "area": 7.2,
+    "fwhm20": 3.29
+   }
+  ],
+  "source": "Biesinger 2011, Table 5",
+  "note": "fwhm = 10 eV pass energy, fwhm20 = 20 eV pass energy"
+ },
+ {
+  "el": "Ni",
+  "compound": "Ni Metal from [5]",
+  "line": "2p3/2",
+  "peaks": [
+   {
+    "be": 852.6,
+    "fwhm": 1.0,
+    "area": 79.6,
+    "fwhm20": 1.02
+   },
+   {
+    "be": 856.3,
+    "fwhm": 2.48,
+    "area": 5.6,
+    "fwhm20": 2.48
+   },
+   {
+    "be": 858.7,
+    "fwhm": 2.48,
+    "area": 14.8,
+    "fwhm20": 2.48
+   }
+  ],
+  "source": "Biesinger 2011, Table 6",
+  "note": "fwhm = 10 eV pass energy, fwhm20 = 20 eV pass energy"
+ },
+ {
+  "el": "Ni",
+  "compound": "Ni Metal - New Line Shape",
+  "line": "2p3/2",
+  "peaks": [
+   {
+    "be": 852.6,
+    "fwhm": 0.94,
+    "area": 81.2,
+    "fwhm20": 0.95
+   },
+   {
+    "be": 856.3,
+    "fwhm": 2.7,
+    "area": 6.3,
+    "fwhm20": 2.7
+   },
+   {
+    "be": 858.7,
+    "fwhm": 2.7,
+    "area": 12.5,
+    "fwhm20": 2.7
+   }
+  ],
+  "source": "Biesinger 2011, Table 6",
+  "note": "fwhm = 10 eV pass energy, fwhm20 = 20 eV pass energy"
+ },
+ {
+  "el": "Ni",
+  "compound": "NiO",
+  "line": "2p3/2",
+  "peaks": [
+   {
+    "be": 853.7,
+    "fwhm": 0.98,
+    "area": 14.3,
+    "fwhm20": 1.02
+   },
+   {
+    "be": 855.4,
+    "fwhm": 2.04,
+    "area": 44.2,
+    "fwhm20": 3.25
+   },
+   {
+    "be": 860.9,
+    "fwhm": 3.85,
+    "area": 34.0,
+    "fwhm20": 3.76
+   },
+   {
+    "be": 864.0,
+    "fwhm": 1.97,
+    "area": 3.6,
+    "fwhm20": 2.04
+   },
+   {
+    "be": 866.3,
+    "fwhm": 2.6,
+    "area": 3.9,
+    "fwhm20": 2.44
+   }
+  ],
+  "source": "Biesinger 2011, Table 6",
+  "note": "fwhm = 10 eV pass energy, fwhm20 = 20 eV pass energy"
+ },
+ {
+  "el": "Ni",
+  "compound": "Ni(OH)2",
+  "line": "2p3/2",
+  "peaks": [
+   {
+    "be": 854.9,
+    "fwhm": 1.12,
+    "area": 7.4,
+    "fwhm20": 1.16
+   },
+   {
+    "be": 855.7,
+    "fwhm": 1.5,
+    "area": 45.3,
+    "fwhm20": 2.29
+   },
+   {
+    "be": 857.7,
+    "fwhm": 1.59,
+    "area": 3.0,
+    "fwhm20": 1.59
+   },
+   {
+    "be": 860.5,
+    "fwhm": 1.06,
+    "area": 1.4,
+    "fwhm20": 1.06
+   },
+   {
+    "be": 861.5,
+    "fwhm": 4.64,
+    "area": 39.2,
+    "fwhm20": 4.65
+   },
+   {
+    "be": 866.5,
+    "fwhm": 3.08,
+    "area": 3.7,
+    "fwhm20": 3.01
+   }
+  ],
+  "source": "Biesinger 2011, Table 6",
+  "note": "fwhm = 10 eV pass energy, fwhm20 = 20 eV pass energy"
+ },
+ {
+  "el": "Ni",
+  "compound": "Gamma NiOOH",
+  "line": "2p3/2",
+  "peaks": [
+   {
+    "be": 854.6,
+    "fwhm": 1.4,
+    "area": 13.8
+   },
+   {
+    "be": 855.3,
+    "fwhm": 6.5,
+    "area": 12.4
+   },
+   {
+    "be": 855.7,
+    "fwhm": 1.4,
+    "area": 9.7
+   },
+   {
+    "be": 856.5,
+    "fwhm": 1.4,
+    "area": 20.7
+   },
+   {
+    "be": 857.8,
+    "fwhm": 1.9,
+    "area": 8.7
+   },
+   {
+    "be": 861.0,
+    "fwhm": 4.0,
+    "area": 23.3
+   },
+   {
+    "be": 864.4,
+    "fwhm": 4.4,
+    "area": 11.4
+   }
+  ],
+  "source": "Biesinger 2011, Table 6",
+  "note": "one FWHM per peak printed (in the 10 eV column position), pass energy not certain"
+ },
+ {
+  "el": "Ni",
+  "compound": "Beta NiOOH (3+ portion)",
+  "line": "2p3/2",
+  "peaks": [
+   {
+    "be": 854.6,
+    "fwhm": 1.4,
+    "area": 9.2
+   },
+   {
+    "be": 855.3,
+    "fwhm": 5.3,
+    "area": 8.3
+   },
+   {
+    "be": 855.7,
+    "fwhm": 1.4,
+    "area": 6.4
+   },
+   {
+    "be": 856.5,
+    "fwhm": 1.4,
+    "area": 13.8
+   },
+   {
+    "be": 857.8,
+    "fwhm": 1.9,
+    "area": 5.8
+   },
+   {
+    "be": 861.0,
+    "fwhm": 4.0,
+    "area": 15.6
+   },
+   {
+    "be": 864.4,
+    "fwhm": 4.4,
+    "area": 7.6
+   }
+  ],
+  "source": "Biesinger 2011, Table 6",
+  "note": "one FWHM per peak printed (in the 10 eV column position), pass energy not certain; 3+ and 2+ portions total 100%"
+ },
+ {
+  "el": "Ni",
+  "compound": "Beta NiOOH (2+ portion)",
+  "line": "2p3/2",
+  "peaks": [
+   {
+    "be": 854.9,
+    "fwhm": 1.12,
+    "area": 2.5
+   },
+   {
+    "be": 855.7,
+    "fwhm": 1.5,
+    "area": 15.1
+   },
+   {
+    "be": 857.7,
+    "fwhm": 1.59,
+    "area": 1.0
+   },
+   {
+    "be": 860.5,
+    "fwhm": 1.06,
+    "area": 0.5
+   },
+   {
+    "be": 861.5,
+    "fwhm": 4.64,
+    "area": 13.1
+   },
+   {
+    "be": 866.5,
+    "fwhm": 3.08,
+    "area": 1.2
+   }
+  ],
+  "source": "Biesinger 2011, Table 6",
+  "note": "one FWHM per peak printed (in the 10 eV column position), pass energy not certain; 3+ and 2+ portions total 100%"
+ },
+ {
+  "el": "Ni",
+  "compound": "NiCr2O4",
+  "line": "2p3/2",
+  "peaks": [
+   {
+    "be": 853.8,
+    "fwhm": 1.22,
+    "area": 7.0,
+    "fwhm20": 1.3
+   },
+   {
+    "be": 855.8,
+    "fwhm": 1.82,
+    "area": 20.5,
+    "fwhm20": 1.86
+   },
+   {
+    "be": 856.5,
+    "fwhm": 3.91,
+    "area": 24.7,
+    "fwhm20": 7.01
+   },
+   {
+    "be": 861.0,
+    "fwhm": 1.27,
+    "area": 2.3,
+    "fwhm20": 1.33
+   },
+   {
+    "be": 861.3,
+    "fwhm": 4.34,
+    "area": 39.4,
+    "fwhm20": 4.31
+   },
+   {
+    "be": 866.0,
+    "fwhm": 2.07,
+    "area": 6.1,
+    "fwhm20": 2.13
+   }
+  ],
+  "source": "Biesinger 2011, Table 6",
+  "note": "fwhm = 10 eV pass energy, fwhm20 = 20 eV pass energy"
+ },
+ {
+  "el": "Ni",
+  "compound": "NiFe2O4",
+  "line": "2p3/2",
+  "peaks": [
+   {
+    "be": 854.5,
+    "fwhm": 1.35,
+    "area": 17.3,
+    "fwhm20": 1.36
+   },
+   {
+    "be": 856.0,
+    "fwhm": 3.03,
+    "area": 38.2,
+    "fwhm20": 2.98
+   },
+   {
+    "be": 861.4,
+    "fwhm": 4.49,
+    "area": 38.5,
+    "fwhm20": 4.5
+   },
+   {
+    "be": 864.7,
+    "fwhm": 3.04,
+    "area": 2.8,
+    "fwhm20": 3.01
+   },
+   {
+    "be": 867.0,
+    "fwhm": 2.61,
+    "area": 3.2,
+    "fwhm20": 2.66
+   }
+  ],
+  "source": "Biesinger 2011, Table 6",
+  "note": "fwhm = 10 eV pass energy, fwhm20 = 20 eV pass energy"
+ }
+]

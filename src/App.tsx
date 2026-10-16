@@ -147,6 +147,7 @@ export default function App() {
         <DataTabs
           element={element}
           tables={tables}
+          meta={meta}
           stats={stats}
           hidden={hiddenTabs}
           nist={<ResultsTable db={db} rows={rows} onRowClick={(row) => setPopup({ kind: "row", row })} />}

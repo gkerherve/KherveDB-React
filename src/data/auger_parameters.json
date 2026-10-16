@@ -1,0 +1,134 @@
+[
+ {
+  "el": "Cu",
+  "compound": "Cu(0)",
+  "be": 932.61,
+  "line": "2p3/2",
+  "ke": null,
+  "auger": "L3M4,5M4,5",
+  "alpha": 1851.23,
+  "source": "Biesinger 2010, Table 7",
+  "note": "literature average (NIST)"
+ },
+ {
+  "el": "Cu",
+  "compound": "Cu(I) oxide",
+  "be": 932.43,
+  "line": "2p3/2",
+  "ke": null,
+  "auger": "L3M4,5M4,5",
+  "alpha": 1849.19,
+  "source": "Biesinger 2010, Table 7",
+  "note": "literature average (NIST)"
+ },
+ {
+  "el": "Cu",
+  "compound": "Cu(II) oxide",
+  "be": 933.57,
+  "line": "2p3/2",
+  "ke": null,
+  "auger": "L3M4,5M4,5",
+  "alpha": 1851.49,
+  "source": "Biesinger 2010, Table 7",
+  "note": "literature average (NIST)"
+ },
+ {
+  "el": "Cu",
+  "compound": "Cu(II) hydroxide",
+  "be": 934.75,
+  "line": "2p3/2",
+  "ke": null,
+  "auger": "L3M4,5M4,5",
+  "alpha": null,
+  "source": "Biesinger 2010, Table 7",
+  "note": "literature average (NIST)"
+ },
+ {
+  "el": "Cu",
+  "compound": "Cu(0)",
+  "be": 932.63,
+  "line": "2p3/2",
+  "ke": null,
+  "auger": "L3M4,5M4,5",
+  "alpha": 1851.24,
+  "source": "Biesinger 2010, Table 8",
+  "note": "this work"
+ },
+ {
+  "el": "Cu",
+  "compound": "Cu(I) oxide",
+  "be": 932.18,
+  "line": "2p3/2",
+  "ke": null,
+  "auger": "L3M4,5M4,5",
+  "alpha": 1849.17,
+  "source": "Biesinger 2010, Table 8",
+  "note": "this work"
+ },
+ {
+  "el": "Cu",
+  "compound": "Cu(II) oxide",
+  "be": 933.76,
+  "line": "2p3/2",
+  "ke": null,
+  "auger": "L3M4,5M4,5",
+  "alpha": 1851.33,
+  "source": "Biesinger 2010, Table 8",
+  "note": "this work"
+ },
+ {
+  "el": "Cu",
+  "compound": "Cu(II) hydroxide",
+  "be": 934.67,
+  "line": "2p3/2",
+  "ke": null,
+  "auger": "L3M4,5M4,5",
+  "alpha": 1850.92,
+  "source": "Biesinger 2010, Table 8",
+  "note": "this work"
+ },
+ {
+  "el": "Zn",
+  "compound": "Zn(0)",
+  "be": 1021.65,
+  "line": "2p3/2",
+  "ke": null,
+  "auger": "L3M4,5M4,5",
+  "alpha": 2013.77,
+  "source": "Biesinger 2010, Table 10",
+  "note": "this work"
+ },
+ {
+  "el": "Zn",
+  "compound": "Zn(II) oxide",
+  "be": 1021.0,
+  "line": "2p3/2",
+  "ke": null,
+  "auger": "L3M4,5M4,5",
+  "alpha": 2010.4,
+  "source": "Biesinger 2010, Table 10",
+  "note": "this work"
+ },
+ {
+  "el": "Zn",
+  "compound": "Zn(0)",
+  "be": 1021.62,
+  "line": "2p3/2",
+  "ke": null,
+  "auger": "L3M4,5M4,5",
+  "alpha": 2013.85,
+  "source": "Biesinger 2010, Table 10",
+  "note": "literature average (NIST)"
+ },
+ {
+  "el": "Zn",
+  "compound": "Zn(II) oxide",
+  "be": 1021.96,
+  "line": "2p3/2",
+  "ke": null,
+  "auger": "L3M4,5M4,5",
+  "alpha": 2010.14,
+  "source": "Biesinger 2010, Table 10",
+  "note": "literature average (NIST)"
+ }
+]

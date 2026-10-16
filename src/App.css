@@ -236,3 +236,43 @@ button.icon { background: none; border: none; font-size: 20px; cursor: pointer; 
 .welcome-foot { display: flex; align-items: center; justify-content: flex-end; gap: 8px; margin-top: 8px; }
 .welcome-foot label { margin-right: auto; display: flex; align-items: center; gap: 6px; }
 .update-notes { white-space: pre-wrap; max-height: 200px; overflow: auto; }
+
+/* ---------- Tabs next to the NIST results ---------- */
+.datatabs { flex: 1; min-height: 0; display: flex; flex-direction: column; }
+.datatabs > .results { flex: 1; border-top-left-radius: 0; }
+.dt-tabs { display: flex; gap: 2px; overflow-x: auto; flex-shrink: 0; }
+.dt-tabs button {
+  padding: 6px 12px; border: 1px solid var(--border); border-bottom: none;
+  border-radius: 6px 6px 0 0; background: var(--surface-2); color: var(--muted);
+  cursor: pointer; white-space: nowrap; font-size: 13px;
+}
+.dt-tabs button:hover { color: var(--text); }
+.dt-tabs button.active { background: var(--surface); color: var(--text); font-weight: 600; position: relative; top: 1px; }
+.dt-page {
+  flex: 1; min-height: 0; overflow: auto; padding: 10px 12px;
+  background: var(--surface); border: 1px solid var(--border); border-radius: 0 8px 8px 8px;
+}
+.dt-page h4 { margin: 4px 0 6px; font-size: 13px; }
+.dt-table { border-collapse: collapse; font-size: 13px; margin-bottom: 4px; }
+.dt-table th, .dt-table td { padding: 4px 10px; border-bottom: 1px solid var(--border); text-align: right; white-space: nowrap; }
+.dt-table th:first-child, .dt-table td:first-child { text-align: left; }
+.dt-table th { position: sticky; top: -10px; background: var(--surface-2); font-weight: 600; }
+.dt-table tbody tr:hover { background: var(--surface-2); }
+.dt-note { color: var(--muted); font-size: 12px; max-width: 900px; margin: 4px 0 14px; line-height: 1.4; }
+.dt-plot { width: 100%; max-width: 900px; height: auto; display: block; margin-bottom: 6px; }
+.dt-plot text { font-size: 11px; fill: var(--text); }
+.dt-plot .muted-text { fill: var(--muted); }
+.dt-plot .axis { stroke: var(--muted); }
+.dt-plot .stick { stroke-width: 2.5; }
+.dt-plot .fam-K { stroke: #4fbe9f; }
+.dt-plot .fam-L { stroke: var(--accent); }
+.dt-plot .fam-M { stroke: #d9822b; }
+
+/* ---------- Preferences ---------- */
+.modal-back { position: fixed; inset: 0; background: rgba(0, 0, 0, 0.35); display: grid; place-items: center; z-index: 50; }
+.modal { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 14px 18px; width: min(360px, calc(100vw - 32px)); box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3); }
+.modal header { display: flex; align-items: center; }
+.modal header h3 { margin: 0; flex: 1; }
+.pref-list { list-style: none; padding: 0; margin: 8px 0 14px; display: grid; gap: 6px; }
+.pref-list label { display: flex; gap: 8px; align-items: center; cursor: pointer; }
+.modal footer { display: flex; gap: 8px; justify-content: flex-end; }

@@ -7,6 +7,9 @@ import { SOURCES } from "./sources";
 import { followElement, isDesktop, openInBrowser, openReferences } from "./platform";
 import { PROPERTY_GROUPS } from "./PropsPage";
 import { SplashScreen, Updater, Welcome } from "./Startup";
+import DataTabs from "./DataTabs";
+import { loadTables, type TablesFile } from "./refTables";
+import { PrefsDialog, useHiddenTabs, usePrefsMenu } from "./Prefs";
 import "./App.css";
 
 type Popup =
@@ -24,6 +27,15 @@ export default function App() {
   const [name, setName] = useState("");
   const [popup, setPopup] = useState<Popup>(null);
   const [panelOpen, setPanelOpen] = useState(false);
+  const [tables, setTables] = useState<TablesFile | null>(null);
+  const [hiddenTabs, setHiddenTabs] = useHiddenTabs();
+  const [prefsOpen, setPrefsOpen] = useState(false);
+  const openPrefs = useCallback(() => setPrefsOpen(true), []);
+  usePrefsMenu(openPrefs);
+
+  useEffect(() => {
+    loadTables().then(setTables, console.error);
+  }, []);
 
   useEffect(() => {
     // Keep the starting image up for at least 1.2 s so it does not just flash
@@ -125,9 +137,20 @@ export default function App() {
           >
             Other Databases &amp; Properties {panelOpen ? "◄" : "►"}
           </button>
+          {!isDesktop && (
+            <button className="secondary" onClick={openPrefs} title="Preferences: choose which tabs are shown" aria-label="Preferences">
+              ⚙
+            </button>
+          )}
         </section>
 
-        <ResultsTable db={db} rows={rows} onRowClick={(row) => setPopup({ kind: "row", row })} />
+        <DataTabs
+          element={element}
+          tables={tables}
+          stats={stats}
+          hidden={hiddenTabs}
+          nist={<ResultsTable db={db} rows={rows} onRowClick={(row) => setPopup({ kind: "row", row })} />}
+        />
       </main>
 
       {panelOpen && m && element && (
@@ -159,6 +182,7 @@ export default function App() {
         </aside>
       )}
 
+      {prefsOpen && <PrefsDialog hidden={hiddenTabs} onChange={setHiddenTabs} onClose={() => setPrefsOpen(false)} />}
       <Welcome />
       <Updater />
       {popup?.kind === "info" && (

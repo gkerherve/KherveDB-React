@@ -1,0 +1,46 @@
+name: Windows build
+
+# Builds the NSIS installer, the signed updater signature and the portable exe.
+# The release lives in gkerherve/KherveDB; artifacts are uploaded there by the release step.
+on:
+  push:
+    tags: ["v*"]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - uses: dtolnay/rust-toolchain@stable
+      - uses: swatinem/rust-cache@v2
+        with:
+          workspaces: src-tauri
+      - run: npm ci
+      - name: Build installer
+        env:
+          TAURI_SIGNING_PRIVATE_KEY: ${{ secrets.TAURI_SIGNING_PRIVATE_KEY }}
+          TAURI_SIGNING_PRIVATE_KEY_PASSWORD: ""
+        run: npx tauri build
+      - name: Name the artifacts as on the website
+        shell: bash
+        run: |
+          set -euo pipefail
+          VER=$(node -p "require('./src-tauri/tauri.conf.json').version.split('.').slice(0,2).join('.')")
+          FULL=$(node -p "require('./src-tauri/tauri.conf.json').version")
+          T=src-tauri/target/release
+          mkdir -p out
+          cp "$T"/bundle/nsis/KherveDB_${FULL}_x64-setup.exe "out/KherveDB_${VER}_x64-setup.exe"
+          cp "$T"/bundle/nsis/KherveDB_${FULL}_x64-setup.exe.sig "out/KherveDB_${VER}_x64-setup.exe.sig"
+          cp "out/KherveDB_${VER}_x64-setup.exe" out/KherveDB-Setup.exe
+          cp "out/KherveDB_${VER}_x64-setup.exe" out/KherveDB_Installer.exe
+          (cd "$T" && 7z a "$GITHUB_WORKSPACE/out/KherveDB_${VER}.zip" khervedb.exe)
+          ls -la out
+      - uses: actions/upload-artifact@v4
+        with:
+          name: KherveDB-Windows
+          path: out/*
